@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using RefitXFSample.Services;
+using Xamarin.Forms;
 
 namespace RefitXFSample
 {

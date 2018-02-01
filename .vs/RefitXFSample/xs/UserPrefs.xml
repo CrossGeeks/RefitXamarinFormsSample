@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{E1BD05B7-B373-4E40-A999-BF99BB9046E0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Properties/AndroidManifest.xml">
+    <Files>
+      <File FileName="Droid/Properties/AndroidManifest.xml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RefitXFSample" expanded="True">
+            <Node name="RefitXFSample.Droid" expanded="True">
+              <Node name="Properties" expanded="True">
+                <Node name="AndroidManifest.xml" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Chard/RefitXamarinFormsSample/RefitXFSample/RefitXFSamplePage.xaml.cs" relfile="RefitXFSample/RefitXFSamplePage.xaml.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.RefitXFSample.Droid PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RefitXFSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9CD90C5F-6496-439A-86A8-962E69F1F10F" automaticSigning="False" />
+  <MultiItemStartupConfigurations />
+</Properties>
