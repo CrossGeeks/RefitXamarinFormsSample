@@ -31,6 +31,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\IApiService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\News.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IRedditApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

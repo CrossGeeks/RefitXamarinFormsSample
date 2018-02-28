@@ -6,6 +6,7 @@ namespace RefitXFSample
     public static class Config
     {
         public static string ApiUrl = "http://makeup-api.herokuapp.com";
+        public static string RedditApiUrl = "http://www.reddit.com/r";
 
         public static string ApiHostName
         {

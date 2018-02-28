@@ -19,14 +19,16 @@ namespace RefitXFSample.Services
         IUserDialogs _userDialogs = UserDialogs.Instance;
         IConnectivity _connectivity = CrossConnectivity.Current;
         IApiService<IMakeUpApi> makeUpApi;
+        IApiService<IRedditApi> redditApi;
         public bool IsConnected { get; set; }
         public bool IsReachable { get; set; }
         Dictionary<int, CancellationTokenSource> runningTasks = new Dictionary<int, CancellationTokenSource>();
         Dictionary<string, Task<HttpResponseMessage>> taskContainer = new Dictionary<string, Task<HttpResponseMessage>>();
 
-        public ApiManager(IApiService<IMakeUpApi> _makeUpApi)
+        public ApiManager(IApiService<IMakeUpApi> _makeUpApi, IApiService<IRedditApi> _redditApi)
         {
             makeUpApi = _makeUpApi;
+            redditApi = _redditApi;
             IsConnected = _connectivity.IsConnected;
             _connectivity.ConnectivityChanged += OnConnectivityChanged;
         }
@@ -55,6 +57,17 @@ namespace RefitXFSample.Services
 
             return await task;
         }
+
+
+        public async Task<HttpResponseMessage> GeNews()
+        {
+            var cts = new CancellationTokenSource();
+            var task = RemoteRequestAsync<HttpResponseMessage>(redditApi.GetApi(Priority.UserInitiated).GetNews());
+            runningTasks.Add(task.Id, cts);
+
+            return await task;
+        }
+
 
 
         protected async Task<TData> RemoteRequestAsync<TData>(Task<TData> task)
