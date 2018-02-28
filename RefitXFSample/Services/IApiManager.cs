@@ -7,6 +7,6 @@ namespace RefitXFSample.Services
     public interface IApiManager
     {
        Task<HttpResponseMessage> GetMakeUps(string brand);
-       Task<HttpResponseMessage> GeNews();
+       Task<HttpResponseMessage> GetNews();
     }
 }

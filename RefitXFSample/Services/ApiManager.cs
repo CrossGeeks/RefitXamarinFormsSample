@@ -49,17 +49,7 @@ namespace RefitXFSample.Services
             }
         }
 
-        public async Task<HttpResponseMessage> GetMakeUps(string brand)
-        {
-            var cts = new CancellationTokenSource();
-            var task = RemoteRequestAsync<HttpResponseMessage>(makeUpApi.GetApi(Priority.UserInitiated).GetMakeUps(brand));
-            runningTasks.Add(task.Id, cts);
-
-            return await task;
-        }
-
-
-        public async Task<HttpResponseMessage> GeNews()
+        public async Task<HttpResponseMessage> GetNews()
         {
             var cts = new CancellationTokenSource();
             var task = RemoteRequestAsync<HttpResponseMessage>(redditApi.GetApi(Priority.UserInitiated).GetNews());
@@ -69,6 +59,14 @@ namespace RefitXFSample.Services
         }
 
 
+        public async Task<HttpResponseMessage> GetMakeUps(string brand)
+        {
+            var cts = new CancellationTokenSource();
+            var task = RemoteRequestAsync<HttpResponseMessage>(makeUpApi.GetApi(Priority.UserInitiated).GetMakeUps(brand));
+            runningTasks.Add(task.Id, cts);
+
+            return await task;
+        }
 
         protected async Task<TData> RemoteRequestAsync<TData>(Task<TData> task)
             where TData : HttpResponseMessage, 

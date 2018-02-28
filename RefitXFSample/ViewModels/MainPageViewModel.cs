@@ -38,11 +38,11 @@ namespace RefitXFSample.ViewModels
 
         async Task GetTimeLine()
         {
-            var makeUpsResponse = await ApiManager.GeNews();
+            var timelineResponse = await ApiManager.GetNews();
 
-            if (makeUpsResponse.IsSuccessStatusCode)
+            if (timelineResponse.IsSuccessStatusCode)
             {
-                var response = await makeUpsResponse.Content.ReadAsStringAsync();
+                var response = await timelineResponse.Content.ReadAsStringAsync();
                 var json = await Task.Run(() => JsonConvert.DeserializeObject<RootNews>(response));
                 News = new ObservableCollection<News>(json.Data.News);
             }
