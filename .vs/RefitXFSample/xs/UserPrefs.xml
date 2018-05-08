@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{E1BD05B7-B373-4E40-A999-BF99BB9046E0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="RefitXFSample/Services/ApiManager.cs">
     <Files>
-      <File FileName="RefitXFSample/Services/IRedditApi.cs" Line="15" Column="1" />
       <File FileName="RefitXFSample/Services/IApiManager.cs" Line="1" Column="1" />
-      <File FileName="RefitXFSample/Services/ApiManager.cs" Line="1" Column="1" />
+      <File FileName="RefitXFSample/Services/ApiManager.cs" Line="66" Column="44" />
       <File FileName="RefitXFSample/Services/IApiService.cs" Line="1" Column="1" />
       <File FileName="RefitXFSample/Services/ApiService.cs" Line="1" Column="1" />
     </Files>
@@ -11,11 +10,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Chard/RefitXamarinFormsSample/RefitXFSample/RefitXFSamplePage.xaml.cs" relfile="RefitXFSample/RefitXFSamplePage.xaml.cs" line="20" column="1" />
+      <Breakpoint file="/Users/charlin/RefitXamarinFormsSample/RefitXFSample/RefitXFSamplePage.xaml.cs" relfile="RefitXFSample/RefitXFSamplePage.xaml.cs" line="20" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.RefitXFSample.Droid PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.RefitXFSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9CD90C5F-6496-439A-86A8-962E69F1F10F" automaticSigning="False" />
+  <MonoDevelop.Ide.ItemProperties.RefitXFSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.202EE377-0C29-45DF-A826-C87FE9FF7036" automaticSigning="False" />
   <MultiItemStartupConfigurations />
 </Properties>

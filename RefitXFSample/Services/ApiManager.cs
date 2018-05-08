@@ -52,7 +52,7 @@ namespace RefitXFSample.Services
         public async Task<HttpResponseMessage> GetNews()
         {
             var cts = new CancellationTokenSource();
-            var task = RemoteRequestAsync<HttpResponseMessage>(redditApi.GetApi(Priority.UserInitiated).GetNews());
+            var task = RemoteRequestAsync<HttpResponseMessage>(redditApi.GetApi(Priority.UserInitiated).GetNews(cts.Token));
             runningTasks.Add(task.Id, cts);
 
             return await task;
@@ -62,7 +62,7 @@ namespace RefitXFSample.Services
         public async Task<HttpResponseMessage> GetMakeUps(string brand)
         {
             var cts = new CancellationTokenSource();
-            var task = RemoteRequestAsync<HttpResponseMessage>(makeUpApi.GetApi(Priority.UserInitiated).GetMakeUps(brand));
+            var task = RemoteRequestAsync<HttpResponseMessage>(makeUpApi.GetApi(Priority.UserInitiated).GetMakeUps(brand, cts.Token));
             runningTasks.Add(task.Id, cts);
 
             return await task;
