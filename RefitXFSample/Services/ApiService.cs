@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net.Http;
 using Fusillade;
-using ModernHttpClient;
 using Refit;
 
 namespace RefitXFSample.Services
@@ -27,7 +26,7 @@ namespace RefitXFSample.Services
             get
             {
                 return new Lazy<T>(() => createClient(
-                    new RateLimitedHttpMessageHandler(new NativeMessageHandler(), Priority.Background))).Value;
+                    new RateLimitedHttpMessageHandler(new HttpClientHandler(), Priority.Background))).Value;
             }
         }
 
@@ -36,7 +35,7 @@ namespace RefitXFSample.Services
             get
             {
                 return new Lazy<T>(() => createClient(
-              new RateLimitedHttpMessageHandler(new NativeMessageHandler(), Priority.UserInitiated))).Value;
+                    new RateLimitedHttpMessageHandler(new HttpClientHandler(), Priority.UserInitiated))).Value;
             }
         }
 
@@ -45,7 +44,7 @@ namespace RefitXFSample.Services
             get
             {
                 return new Lazy<T>(() => createClient(
-              new RateLimitedHttpMessageHandler(new NativeMessageHandler(), Priority.Speculative))).Value;
+                    new RateLimitedHttpMessageHandler(new HttpClientHandler(), Priority.Speculative))).Value;
             }
         }
 
